@@ -6,5 +6,6 @@ class CoreServices:
     
     def headLightsOn(self):
         self.message='Head lights Turned On!!!'
+        return self.message
 
         
