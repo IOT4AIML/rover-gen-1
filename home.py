@@ -8,7 +8,7 @@ app= flask.Flask(__name__)
 def headLightsOn():
      light=CoreServices()
      return light.headLightsOn(True)
-@app.route('/api/home/lightoff', methods=['GET'])
+@app.route('/api/home/lightsoff', methods=['GET'])
 def headLightsOff():
      light=CoreServices()
      return light.headLightsOn()
