@@ -1,11 +1,25 @@
+import RPi.GPIO as GPIO
 
 class CoreServices:
     def __init__(self):
         self.message=''
+        self.led_out=12
+        GPIO.setmode(GPIO.BOARD)
+        GPIO.setup(self.led_out, GPIO.OUT)
 
     
-    def headLightsOn(self):
+    def headLightsOn(self,lightsOn=False):
         self.message='Head lights Turned On!!!'
+        turnLightsOnOff(lightsOn)
         return self.message
+    
+
+    def turnLightsOnOff(self,lightsOn=False):
+        if lightsOn:
+            GPIO.output(self.led_out,GPIO.HIGH)
+        else:
+            GPIO.output(self.led_out,GPIO.LOW)
+            
+
 
         
