@@ -9,7 +9,7 @@ def headLightsOn():
      light=CoreServices()
      return light.headLightsOn(True)
 @app.route('/api/home/lightoff', methods=['GET'])
-def headLightsOn():
+def headLightsOff():
      light=CoreServices()
      return light.headLightsOn()
 
