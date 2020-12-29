@@ -4,7 +4,11 @@ from servicecomponents.roverservices  import  CoreServices
 
 app= flask.Flask(__name__)
 
-@app.route('/api/home/turnonlights', methods=['GET'])
+@app.route('/api/home/lightson', methods=['GET'])
+def headLightsOn():
+     light=CoreServices()
+     return light.headLightsOn(True)
+@app.route('/api/home/lightoff', methods=['GET'])
 def headLightsOn():
      light=CoreServices()
      return light.headLightsOn()
