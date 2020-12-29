@@ -18,6 +18,7 @@ class CoreServices:
             self.message='Head lights Turned On!!!'
         else:
             self.message='Head lights Turned Off!!!'
+            GPIO.output(self.led_out,GPIO.LOW)
 
         self.turnLightsOnOff(lightsOn)
         return self.message
