@@ -19,7 +19,7 @@ class CoreServices:
         else:
             self.message='Head lights Turned Off!!!'
 
-        turnLightsOnOff(lightsOn)
+        self.turnLightsOnOff(lightsOn)
         return self.message
     
 
