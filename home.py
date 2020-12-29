@@ -11,7 +11,7 @@ def headLightsOn():
 @app.route('/api/home/lightsoff', methods=['GET'])
 def headLightsOff():
      light=CoreServices()
-     return light.headLightsOn()
+     return light.headLightsOn(False)
 
 
 app.run(host="0.0.0.0",port=9999)
